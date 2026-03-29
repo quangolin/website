@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fabian-hartmann.de</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="about">
+            Hallo, ich heiße Fabian.<br />
+            Ich bin Software Developer und lebe in München.<br />
+            Ich baue Apps, Webseiten und vieles mehr.<br />
+            <a href="" id="mailme">Schreib mir</a> wenn du Interesse hast.
+        </div>
+
+        <div class="links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#mailme').off('click').click(function() {
+                var user = 'mail';
+                var domain = 'fabian-hartmann.de';
+                var locationstr = 'mailto:' + user + '@' + domain;
+                window.location = locationstr;
+                
+                return false;
+            });
+        });
+    </script>
+
+</body>
+</html>
